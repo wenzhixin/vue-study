@@ -1,0 +1,20 @@
+{
+  "name": "vue-study",
+  "version": "1.0.0",
+  "description": "Study Vue.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenzhixin/vue-study.git"
+  },
+  "author": "wenzhixin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wenzhixin/vue-study/issues"
+  },
+  "homepage": "https://github.com/wenzhixin/vue-study#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "vue": "^2.1.3"
+  }
+}
