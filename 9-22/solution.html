@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9-22</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        tr:hover {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="app">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(student, index) in students">
+                    <td>{{student.no}}</td>
+                    <td>{{student.name}}</td>
+                    <td><a href="javascript:;" v-on:click="onRemove(index)">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+    	<button class="btn btn-default" v-on:click="onAdd">添加一行</button>
+    </div>
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/vue/dist/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            students: [{
+                no: 'xh001',
+                name: '王小明'
+            }, {
+                no: 'xh002',
+                name: '刘小芳'
+            }]
+        },
+        methods: {
+            onAdd: function () {
+                this.students.push({
+                    no: 'xh003',
+                    name: '王小五'
+                });
+            },
+            onRemove: function (index) {
+                this.students.splice(index, 1);
+            }
+        }
+    });
+</script>
+</body>
+</html>
